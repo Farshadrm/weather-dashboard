@@ -1,54 +1,63 @@
-# React + TypeScript + Vite
+#  Weather Dashboard App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern and responsive weather dashboard built with React + TypeScript. It displays current weather data, historical monthly averages, and 14-day forecasts for selected cities.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+##  Getting Started
 
-## Expanding the ESLint configuration
+1. **Clone the repository & install dependencies**:
+   ```bash
+   git clone https://github.com/your-username/weather-dashboard.git
+   cd weather-dashboard
+   npm install
+   ```
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+2. **Create a `.env` file** in the root directory and add your OpenWeatherMap API key:
+   ```
+   REACT_APP_OPENWEATHER_API_KEY=your_api_key_here
+   ```
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+3. **Start the development server**:
+   ```bash
+   npm run dev
+   ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+##  Features
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+- **Login Page**: Enter your name to access the dashboard.
+- **Dashboard Panel**:
+  - **Current Weather**: Shows the current temperature, conditions, date, and time for the selected city.
+  - **Monthly Average Chart**: Displays average temperatures over previous months (static or API-based).
+  - **Forecast Cards**: Displays a 14-day weather forecast.
+  - **City Selector**: Dropdown to choose the city for which data is displayed.
+  - **Theme Toggle**: Switch between light and dark mode.
+  - **Language Switcher**: Toggle between English and Persian.
+  - **Logout Button**: Return to the login page.
+
+---
+
+## Technologies Used
+
+-  React + TypeScript
+-  Tailwind CSS
+-  i18next (internationalization)
+-  Axios (for API calls)
+-  Chart.js (for temperature chart)
+-  OpenWeatherMap API
+-  Light/Dark Mode Support
+
+---
+
+## Notes
+
+- You need an active internet connection to fetch real-time weather data.
+- Get a free API key from [OpenWeatherMap](https://openweathermap.org/api) to make requests.
+
+---
+
+## Author
+
+Made by Farshad-Rm
