@@ -8,7 +8,7 @@ A modern and responsive weather dashboard built with React + TypeScript. It disp
 
 1. **Clone the repository & install dependencies**:
    ```bash
-   git clone https://github.com/your-username/weather-dashboard.git
+   git clone https://github.com/Farshad-rm/weather-dashboard.git
    cd weather-dashboard
    npm install
    ```
